@@ -133,6 +133,8 @@ elif env['platform'] in ('x11', 'linux'):
     if distro.like() == "arch" or distro.id() == "arch":
         env.Append(CPPDEFINES=["_ARCH"])
 
+    env.Append(CPPPATH=["/home/abotero/gdal/build/install/include"])
+
 elif env['platform'] == "windows":
     env['target_path'] += 'win64/'
     env['target_name'] += ".dll"
@@ -166,7 +168,7 @@ else:
 env.Append(CPPPATH=['.', godot_headers_path, cpp_bindings_path + 'include/',
            cpp_bindings_path + 'gen/include/', rte_cpp_path, vector_cpp_path])
 env.Append(LIBPATH=[cpp_bindings_path + 'bin/', rte_libpath,
-           vector_libpath, os.path.join(env['osgeo_path'], "lib")])
+           vector_libpath, os.path.join(env['osgeo_path'], "lib"), "/home/abotero/gdal/build/install/lib"])
 env.Append(LIBS=[cpp_library, rte_library, vector_library, gdal_lib_name])
 
 # tweak this if you want to use different folders, or more folders, to store your source code in.

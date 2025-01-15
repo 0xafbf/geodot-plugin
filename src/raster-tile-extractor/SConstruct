@@ -29,6 +29,7 @@ env['target_path'] = 'build/'
 env['target_name'] = 'libRasterTileExtractor'
 
 env.Append(CXXFLAGS=['-std=c++17', '-fPIC'])
+env.Append(CPPPATH=["/home/abotero/gdal/build/install/include"])
 
 # Check our platform specifics
 if env['platform'] in ('x11', 'linux'):
