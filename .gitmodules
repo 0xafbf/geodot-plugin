@@ -1,3 +1,6 @@
 [submodule "godot-cpp"]
 	path = godot-cpp
 	url = https://github.com/godotengine/godot-cpp
+[submodule "gdal"]
+	path = gdal
+	url = https://github.com/OSGeo/gdal.git
